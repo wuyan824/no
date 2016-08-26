@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 600px;
+            /*height: 700px;*/
+            /*border: 1px solid gray;*/
+            margin: 100px auto;
+        }
+        .hair {
+            width: 300px;
+            height: 50px;
+            margin: 0 auto;
+            position: relative;
+            transition:all .2s;
+        }
+        .hair:before,.hair:after {
+            content: '';
+            width: 10px;
+            height: 50px;
+            background-color: greenyellow;
+            position: absolute;
+            border-radius: 10px;
+
+        }
+        .hair:after {
+            transform: rotate(30deg);
+            right: 60px;
+            top: 25px;
+        }
+        .hair:before {
+            transform: rotate(-30deg);
+            left: 60px;
+            top: 25px;
+        }
+        .head {
+            width: 300px;
+            height: 150px;
+            background-color: greenyellow;
+            margin: 0 auto 10px;
+            border-radius: 140px 140px 0 0;
+            position: relative;
+            transition:all .2s;
+        }
+        .head:before,.head:after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 60px;
+        }
+        .head:before{
+            left: 70px;
+        }
+        .head:after {
+            right: 70px;
+        }
+        .body {
+            width: 300px;
+            height: 250px;
+            background-color: greenyellow;
+            margin: 0 auto;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+        }
+        .body:before,.body:after {
+            content: '';
+            width: 60px;
+            height: 200px;
+            background-color: greenyellow;
+            position: absolute;
+            border-radius:40px;
+            transition:all .2s;
+            transform-origin: top center;
+        }
+        .body:before {
+            left: -70px;
+        }
+        .body:after {
+            right: -70px;
+        }
+        .foot {
+            width: 300px;
+            height: 150px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .foot:after,.foot:before {
+            content: '';
+            width: 60px;
+            height: 120px;
+            background-color: greenyellow;
+            position: absolute;
+            border-radius: 0 0 40px 40px;
+            transition:all .2s;
+        }
+        .foot:after {
+            right: 50px;
+        }
+        .foot:before{
+            left: 50px;
+        }
+        .box:hover .body:before {
+            transform: rotate(15deg);
+        }
+        .box:hover .body:after {
+            transform: rotate(-15deg);
+        }
+        .box:hover .head {
+            transform:translate(0,-10px);
+        }
+        .box:hover .hair {
+            transform: translate(0,-10px);
+        }
+        .box:hover .head:before {
+            background-color: yellow;
+        }
+        .box:hover .head:after {
+            background-color: yellow;
+        }
+        .box:hover .foot:before {
+            height:150px;
+        }
+        .box:hover .foot:after {
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="hair"></div>
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="foot"></div>
+</div>
+</body>
+</html>
